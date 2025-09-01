@@ -1,5 +1,4 @@
 //THREEJS RELATED VARIABLES 
-
 var scene,
   camera, fieldOfView, aspectRatio, nearPlane, farPlane,
   gobalLight, shadowLight, backLight,
@@ -27,6 +26,8 @@ var cameraPosGameOver = 260;
 var monsterAcceleration = 0.004;
 var malusClearColor = 0xb44b39;
 var malusClearAlpha = 0;
+
+// YOU CAN ADD ANOTHER DRAMATIC MUSIC
 var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/264161/Antonio-Vivaldi-Summer_01.mp3');
 
 var fieldGameOver, fieldDistance;
@@ -190,12 +191,14 @@ function createFloor() {
     transparent:true,
     opacity:.5
   }));
+
   //floorShadow.rotation.x = -Math.PI / 2;
   floorShadow.receiveShadow = true;
   
   floorGrass = new THREE.Mesh(new THREE.SphereGeometry(floorRadius-.5, 50, 50), new THREE.MeshBasicMaterial({
     color: 0x7abf8e
   }));
+
   //floor.rotation.x = -Math.PI / 2;
   floorGrass.receiveShadow = false;
   
@@ -1294,10 +1297,8 @@ function initUI(){
 }
 
 
+// MODELS
 
-////////////////////////////////////////////////
-//                                        MODELS
-////////////////////////////////////////////////
 
 // TREE
 
